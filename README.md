@@ -6,7 +6,7 @@ Github Actions for docker spesialisert for team bidrag
 
 ### Hovedregel for design:
 Alt blir utført av bash-scripter slik at det enkelt kan testes på reell kodebase uten å måtte bygge med
-github. Javascript brukes dog til å hente informasjon om den som forårsaker en workflow til å bli utført.
+github.
 
 ### Changelog
 
