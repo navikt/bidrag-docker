@@ -1,0 +1,5 @@
+name: Build and publish Docker image
+description: Build and publish Docker image
+runs:
+  using: node12
+  main: dist/index.js
