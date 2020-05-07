@@ -10,7 +10,7 @@ set -e
 #
 ############################################
 
-REQUEST=$(curl --head --request "GET https://$IMAGE/manifests/$GITHUB_SHA" -u "$GITHUB_ACTOR:$GITHUB_TOKEN")
+REQUEST=$(curl --head --request GET "https://$IMAGE/manifests/$GITHUB_SHA" -u "$GITHUB_ACTOR:$GITHUB_TOKEN")
 echo "
 Github head request:
 ----
