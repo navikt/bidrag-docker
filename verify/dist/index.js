@@ -1489,7 +1489,7 @@ async function run() {
   try {
 
     // Execute tag bash script
-    await exec.exec(`bash ${__dirname}/../build.sh`);
+    await exec.exec(`bash ${__dirname}/../verify.sh`);
 
   } catch (error) {
     core.setFailed(error.message);
