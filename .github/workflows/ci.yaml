@@ -22,7 +22,7 @@ jobs:
         with:
           artifact_folder: bidrag-docker/build
       - name: Install verify
-        users: naikt/bidrag-node/build-with-ncc@v1
+        uses: naikt/bidrag-node/build-with-ncc@v1
         with:
           artifact_folder: bidrag-docker/verify
       - name: Generate timestamp
