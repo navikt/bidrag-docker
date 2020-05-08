@@ -12,4 +12,5 @@ github.
 
 Versjon | Endringstype | Beskrivelse
 --------|--------------|------------
+v1.1.0  | Opprettet    | `exists`: sjekker om docker image allerede er lastet opp til github
 v1.0.0  | Opprettet    | `build`: bygger et docker image 
