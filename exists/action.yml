@@ -1,7 +1,7 @@
-name: Verify Image
-description: Verifies if a docker image exists
+name: Image exists
+description: Checks if a docker image exists
 outputs:
-  is_not_existing:
+  is_not:
     description: true when the image cannot be found in github package registry, false if not
 runs:
   using: node12

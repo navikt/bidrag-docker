@@ -5,7 +5,7 @@ async function run() {
   try {
 
     // Execute tag bash script
-    await exec.exec(`bash ${__dirname}/../verify.sh`);
+    await exec.exec(`bash ${__dirname}/../exists.sh`);
 
   } catch (error) {
     core.setFailed(error.message);
