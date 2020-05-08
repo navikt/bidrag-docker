@@ -1487,9 +1487,10 @@ const exec = __webpack_require__(960);
 
 async function run() {
   try {
+    const imageName = core.getInput('image_name');
 
     // Execute tag bash script
-    await exec.exec(`bash ${__dirname}/../exists.sh`);
+    await exec.exec(`bash ${__dirname}/../exists.sh ${imageName}`);
 
   } catch (error) {
     core.setFailed(error.message);
