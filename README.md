@@ -12,6 +12,7 @@ github.
 
 Versjon | Endringstype | Beskrivelse
 --------|--------------|------------
+v1.1.2  | Endret       | `exists`: hvis ikke 404, så anta at image ikke finnes hvis det 401
 v1.1.1  | Endret       | `exists`: image navn som argument til script
 v1.1.0  | Opprettet    | `exists`: sjekker om docker image allerede er lastet opp til github
 v1.0.0  | Opprettet    | `build`: bygger et docker image 
