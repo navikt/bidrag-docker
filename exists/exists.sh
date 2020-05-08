@@ -7,7 +7,7 @@ set -e
 # 1) henter headere til en GET request etter docker-manifest på github
 # 2) teller antall ganger teksten "HTTP/1.1 404" kommer i head requesten etter manifestet
 # 3a) når antall av "HTTP/1.1 404" er 0, så blir "not found" satt false
-#     - hvis antall av "HTTP/1.1 301" er 1, så blir "not found" satt til false
+#     - hvis antall av "HTTP/1.1 401" er 1, så blir "not found" satt til false
 #     - hvis antall av "HTTP/1.0 200" ikke er 0 ellers så feiler action
 # 4) når forrige tester ikke slår til så er "is not found" true
 #
@@ -29,11 +29,11 @@ echo "
 Found $NF_COUNT mentions of $NOT_FOUND"
 
 if [ "$NF_COUNT" -eq 0 ]; then
-  MOVED="HTTP/1.1\ 301"
-  MOVED_COUNT=$(echo "$REQUEST" | grep -c "$MOVED" || true)
+  UNAUTHORIZED="HTTP/1.1\ 401"
+  UNAUTHORIZED_COUNT=$(echo "$REQUEST" | grep -c "$UNAUTHORIZED" || true)
 
-  if [ "$MOVED_COUNT" -eq 1 ]; then
-    echo perminantly moved, assuming not found
+  if [ "$UNAUTHORIZED_COUNT" -eq 1 ]; then
+    echo unauthorized, assuming not found
     echo ::set-output name=not_found::false
     exit 0;
   fi
