@@ -3,7 +3,7 @@ set -e
 
 ############################################
 #
-# Følgende skjer i dette skriptet:
+# Følgende skjer i dette skriptet (krever bla. miljøvariabelen IMAGE):
 # 1) bygger et docker image fra miljøvariabelen IMAGE
 # 2) bruker GITHUB_TOKEN til docker login til repoet som bygges
 # 3) pusher image til github registry
