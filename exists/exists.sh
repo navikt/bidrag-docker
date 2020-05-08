@@ -15,9 +15,10 @@ set -e
 
 IMAGE_NAME=$1
 
-REQUEST=$(curl --head --request GET "https://docker.pkg.github.com/v2/$GITHUB_REPOSITORY/$IMAGE_NAME/manifests/$GITHUB_SHA" -u "$GITHUB_ACTOR:$GITHUB_TOKEN")
+URL="https://docker.pkg.github.com/v2/$GITHUB_REPOSITORY/$IMAGE_NAME/manifests/$GITHUB_SHA"
+REQUEST=$(curl --head --request GET "$URL" -u "$GITHUB_ACTOR:$GITHUB_TOKEN")
 echo "
-Github head request:
+Headere i respons fra $URL:
 ----
 $REQUEST"
 
