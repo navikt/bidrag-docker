@@ -1,0 +1,12 @@
+name: Local image exists
+description: Checks if a local docker image exists
+inputs:
+  image_id:
+    description: the image id of the docker image
+    required: true
+outputs:
+  not_found:
+    description: true when the image cannot be found among local docker images
+runs:
+  using: node12
+  main: dist/index.js
