@@ -25,6 +25,10 @@ jobs:
         uses: navikt/bidrag-node/build-with-ncc@v1
         with:
           artifact_folder: bidrag-docker/exists
+      - name: Install local-exists
+        uses: navikt/bidrag-node/build-with-ncc@v1
+        with:
+          artifact_folder: bidrag-docker/local-exists
       - name: Generate timestamp
         id: now
         run: echo ::set-output name=timestamp::$(date +"%Y-%m-%d:%T")

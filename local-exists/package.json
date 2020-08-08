@@ -1,5 +1,5 @@
 {
-  "name": "build-docker-image",
+  "name": "docker-exists-locally",
   "version": "1.0.0",
   "dependencies": {
     "@actions/core": "^1.2.4",
