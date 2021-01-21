@@ -12,6 +12,7 @@ github.
 
 Versjon | Endringstype | Beskrivelse
 --------|--------------|------------
+v1.2.1  | Endret       | `lexists`: sjekker at protokoll er HTTP/2 ikke HTTP/1.1
 v1.2.0  | Opprettet    | `local-exists`: sjekker om docker image finnes lokalt
 v1.1.2  | Endret       | `exists`: hvis ikke 404, så anta at image ikke finnes hvis det 401
 v1.1.1  | Endret       | `exists`: image navn som argument til script
