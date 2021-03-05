@@ -7,7 +7,6 @@ set -e
 # 1) henter headere til en GET request etter docker-manifest på github
 # 2) teller antall ganger teksten "HTTP/2 404" kommer i head requesten etter manifestet
 # 3a) når antall av "HTTP/2 404" er 0, så blir "not found" satt false
-#     - hvis antall av HTTP/2\ 401 er 1, så antar vi at den ikke blir funnet, output = false
 #     - hvis antall av "HTTP/2 401" er 1, så blir "not found" satt til false
 #     - hvis antall av "HTTP/1.0 200" ikke er 0 ellers så feiler action
 # 4) når forrige tester ikke slår til så er "is not found" true
@@ -42,8 +41,8 @@ if [ "$NF_COUNT" -eq 0 ]; then
   SUCCESS="HTTP/2\ 200"
   SUCCESS_COUNT=$(echo "$REQUEST" | grep -c "$SUCCESS" || true)
 
-  if [ "$SUCCESS_COUNT" -gt 0 ]; then
-    echo ::error:: not a successful http request for headers
+  if [ "$SUCCESS_COUNT" -eq 0 ]; then
+    echo ::error not a successful http request for headers
     exit 1;
   fi
 
