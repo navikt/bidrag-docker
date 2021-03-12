@@ -12,6 +12,6 @@ set -x
 IMAGE_ID=$1
 IS_NOT_FOUND="false"
 
-docker inspect $IMAGE_ID || IS_NOT_FOUND="true"
+sudo podman inspect $IMAGE_ID || IS_NOT_FOUND="true"
 
 echo ::set-output name=not_found::"$IS_NOT_FOUND"
