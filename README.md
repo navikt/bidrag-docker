@@ -12,6 +12,8 @@ github.
 
 Versjon | Endringstype | Beskrivelse
 --------|--------------|------------
+v2.0.2  | Endret       | `build`: bruker `podman` eller `docker`
+v2.0.2  | Endret       | `exists`: bruker HTTP/1.1 eller HTTP/2
 v2.0.1  | Endret       | `build`: fra `docker` til `sudo podman`
 v2.0.0  | Endret       | `local-exists`: fra `docker` til `sudo podman`
 v1.2.1  | Endret       | `exists`: sjekker at protokoll er HTTP/2 ikke HTTP/1.1
