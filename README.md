@@ -12,6 +12,7 @@ github.
 
 Versjon | Endringstype | Beskrivelse
 --------|--------------|------------
+v2.0.1  | Endret       | `build`: fra `docker` til `sudo podman`
 v2.0.0  | Endret       | `local-exists`: fra `docker` til `sudo podman`
 v1.2.1  | Endret       | `exists`: sjekker at protokoll er HTTP/2 ikke HTTP/1.1
 v1.2.0  | Opprettet    | `local-exists`: sjekker om docker image finnes lokalt
