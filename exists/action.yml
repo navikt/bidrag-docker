@@ -1,9 +1,5 @@
 name: Image exists
 description: Checks if a docker image exists
-inputs:
-  image_name:
-    description: the name of the docker image to check if exists
-    required: true
 outputs:
   not_found:
     description: true when the image cannot be found in github package registry, false if not

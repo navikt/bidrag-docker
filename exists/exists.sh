@@ -13,9 +13,7 @@ set -e
 #
 ############################################
 
-IMAGE_NAME=$1
-
-URL="https://docker.pkg.github.com/v2/$GITHUB_REPOSITORY/$IMAGE_NAME/manifests/$GITHUB_SHA"
+URL="https://ghrc.io/v2/$GITHUB_REPOSITORY/manifests/$GITHUB_SHA"
 REQUEST=$(curl --head --request GET "$URL" -u "$GITHUB_ACTOR:$GITHUB_TOKEN")
 echo "
 Headere i respons fra $URL:
